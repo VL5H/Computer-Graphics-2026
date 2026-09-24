@@ -1,0 +1,38 @@
+body {
+      margin: 0;
+      overflow: hidden;
+      background: #050510;
+      color: white;
+      font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+#info {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    padding: 12px 14px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#graphics-menu {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    padding: 12px 14px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#graphics-level {
+    margin-top: 6px;
+    width: 100%;
+}

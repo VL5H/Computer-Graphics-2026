@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Graphics Project 1</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="info">
+    <b>Canyon Drive: Level 1</b><br>
+    <br>
+    <b>Controls:</b><br>
+    Up/Down Arrow: Move Forward/Backward<br>
+    Left/Right Arrow: Move Left/Right<br>
+    R Key: Reset<br>
+    <br>
+    Avoid bushes!<br>
+  </div>
+
+  <div id="graphics-menu">
+    <label for="graphics-level"><b>Select Graphics Level</b></label><br>
+    <select id="graphics-level">
+      <option value="1" selected>Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+    </select>
+  </div>
+
+  <script>
+    const graphicsLevel = document.getElementById("graphics-level");
+    const currentLevel = graphicsLevel.value;
+    const levelPages = {"1": "main.html", "2": "level2.html", "3": "level3.html"};
+
+    graphicsLevel.addEventListener("change", () => {
+      if (graphicsLevel.value !== currentLevel && graphicsLevel.value in levelPages) {
+        window.open(levelPages[graphicsLevel.value], "_blank");
+      }
+      graphicsLevel.value = currentLevel;
+    });
+  </script>
+
+</body>
+</html>
