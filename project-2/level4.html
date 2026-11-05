@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Graphics Project 2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="gl_helpers.js" defer></script>
+  <script src="script4.js" defer></script>
+</head>
+<body>
+  <canvas id="glcanvas"></canvas>
+
+  <!-- info box -->
+  <div id="info">
+    <b>Cube World: Level 4 (Extra Stuff)</b>
+    <br>
+    <b>Camera Controls:</b><br>
+    Up/Down Arrow: Move Forward/Backward<br>
+    Left/Right Arrow: Turn Left/Right<br>
+    Space Bar: Jump<br>
+    Shift Key: Look Up<br>
+    R Key: Reset<br>
+    <label for="resolution"><b>Resolution:</b></label>
+    <select id="resolution"></select>
+  </div>
+
+  <!-- level selection menu -->
+  <div id="graphics-menu">
+    <label for="graphics-level"><b>Select Level</b></label><br>
+    <select id="graphics-level">
+      <option value="0">Level 0</option>
+      <option value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4" selected>Level 4</option>
+    </select>
+  </div>
+
+  <!-- listener script for level selection menu -->
+  <script>
+    const graphicsLevel = document.getElementById("graphics-level");
+    const currentLevel = graphicsLevel.value;
+    const levelPages = {"0": "index.html", "1": "level1.html", "2": "level2.html", "3": "level3.html", "4": "level4.html"};
+
+    graphicsLevel.addEventListener("change", () => {
+      if (graphicsLevel.value !== currentLevel && graphicsLevel.value in levelPages) {
+        window.open(levelPages[graphicsLevel.value], "_blank");
+      }
+      graphicsLevel.value = currentLevel;
+    });
+  </script>
+
+</body>
+</html>
