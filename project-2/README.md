@@ -211,4 +211,6 @@ In future iterations of the project I plan to add the following features to crea
 
 [Demo Video](Project_2_Demo_Video_11_06_2026.mp4)
 
+Note: File is a bit large so you may have to download and then view.
+
 
